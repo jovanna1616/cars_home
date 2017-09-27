@@ -17,11 +17,11 @@ Route::get('/', function () {
     return view('welcome', compact('name', 'age'));
 });
 
-Route::get('/about', function () {
+Route::get('/about', ['as'=>'about', 'uses' => function () {
 
 	$about_title = 'About us';
     return view('about', compact('about_title'));
-});
+}]);
 
 Route::get('/cars', ['as' => 'all-cars', 'uses' => 'CarsController@index']);
 Route::get('/cars/{id}', ['as' => 'single-car', 'uses' => 'CarsController@show']);
