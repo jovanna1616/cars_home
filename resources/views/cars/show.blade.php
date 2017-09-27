@@ -78,15 +78,9 @@
             @endif
 
             <div class="content">
-                <ul>
-                    @foreach($cars as $car)
-                    <li>
-                        <a href="{{ route('single-car', ['id' => $car->id]) }}">
-                            {{ $car->title }}
-                        </a>
-                    </li>
-                    @endforeach
-                </ul>
+                <p>{{ $car->title }}</p>
+                <p>{{ $car->producer }}</p>
+                <p>{{ $car->number_of_doors }}</p>
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
