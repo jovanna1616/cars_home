@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Welcome to cars project
+                    {{ $about_title }}
                 </div>
 
                 <div class="links">

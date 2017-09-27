@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/about', function () {
+
+	$about_title = 'About us';
+    return view('about', compact('about_title'));
+});
